@@ -18,6 +18,12 @@ git diff = shows changes in files
 
 git diff --help = shows all commands
 
+git push <repository> = sends (push) your local commits to a remote repository (local -> remote)
+
+git pull <repository> = updates your local branch with the latest changes from a remote repository (remote -> local)
+
+git clone <HTTPS,SSH> = creates a local copy of an existing Git repository
+"after we make a remote repository in githup we must clone it ."
 
 ----> Commit syntax
 git log = shows commits (detail of commit like num of commit, author, date of commit)
