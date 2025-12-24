@@ -45,10 +45,13 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 
 | Command | Description |
 |-------|-------------|
+| `chown user:group file` | Change ownership |
 |   etc.   |      etc.    |
+
 
 **Permission logic:**  
 `r = read (4)` · `w = write (2)` · `x = execute (1)`
+
 ---
 
 ## 🧠 Processes & System Status
