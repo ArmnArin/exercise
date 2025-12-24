@@ -1,18 +1,8 @@
-# 🌿 Git Cheat Sheet
 
-> 💡 **Emoji input**
->
-> - **Windows:** `Win + .`
-> - **macOS:** `Ctrl + Cmd + Space`
-
-> 🌿 **Git quick help**
->
-> - Show local branches: `git branch`
-> - Show remote branches: `git branch -r`
-> - Show all branches: `git branch -a`
-> - Switch branch: `git checkout <branch>`
-> - Create & switch branch: `git checkout -b <branch>`
-> - Sync remote refs: `git fetch --all --prune`
+- **Working Directory**: Your files on disk
+- **Staging Area**: Prepared files for commit
+- **Local Repository**: Commits stored locally
+- **Remote Repository**: Shared repository (GitHub, GitLab, etc.)
 
 ---
 
@@ -20,23 +10,23 @@
 
 | Command | Description |
 |-------|-------------|
-| `git init` | Initialize a new repository |
-| `git clone <url>` | Clone remote repository |
-| `git remote -v` | Show remotes |
-| `git remote add origin <url>` | Add remote origin |
+| `git init` | Create a new Git repository |
+| `git clone <HTTPS/SSH>` | Create a local copy of a remote repository |
+| `git remote` | List remote repositories |
+| `git remote -v` | Show remote URLs |
 
 ---
 
-## 📄 Status & Changes
+## 📄 Status & File Tracking
 
 | Command | Description |
 |-------|-------------|
-| `git status` | Show working tree status |
-| `git diff` | Show unstaged changes |
-| `git diff --staged` | Show staged changes |
-| `git add <file>` | Stage file |
-| `git add .` | Stage all changes |
-| `git reset <file>` | Unstage file |
+| `git status` | Show current state of files |
+| `git add <file>` | Add file to staging area |
+| `git add .` | Add all files to staging area |
+| `git rm --cached <file>` | Unstage file (stage → working directory) |
+| `git diff` | Show file changes |
+| `git diff --help` | Show diff help |
 
 ---
 
@@ -44,10 +34,44 @@
 
 | Command | Description |
 |-------|-------------|
-| `git commit -m "message"` | Create commit |
-| `git commit --amend` | Amend last commit |
-| `git log` | Commit history |
-| `git log --oneline --graph` | Compact history |
+| `git commit -m "msg"` | Commit staged files |
+| `git commit -a -m "msg"` | Stage tracked files and commit |
+| ⚠️ | New files must be added once with `git add` |
+
+---
+
+## 📜 Commit History
+
+| Command | Description |
+|-------|-------------|
+| `git log` | Show full commit history |
+| `git log --help` | Log command help |
+| `git log --oneline` | One commit per line |
+| `git log -2 --oneline` | Last two commits |
+| `git log -p` | Commits with file changes |
+| `git log --graph` | Commit tree with branches |
+
+---
+
+## 🔄 Undo & Reset
+
+| Command | Description |
+|-------|-------------|
+| `git checkout -- <file>` | Restore file to last commit |
+| `git reset HEAD .` | Unstage all files |
+| `git reset <commit>` | Soft reset (keep files) |
+| `git reset --hard <commit>` | Hard reset (delete changes) |
+
+⚠️ **Warning:** `--hard` deletes files permanently
+
+---
+
+## 🌐 Remote Sync
+
+| Command | Description |
+|-------|-------------|
+| `git push <repository>` | Push local commits to remote |
+| `git pull <repository>` | Update local branch from remote |
 
 ---
 
@@ -55,86 +79,70 @@
 
 | Command | Description |
 |-------|-------------|
-| `git branch` | List local branches |
+| `git branch <name>` | Create branch |
+| `git branch -l` | List local branches |
 | `git branch -r` | List remote branches |
 | `git branch -a` | List all branches |
-| `git branch -v` | Branch with last commit |
-| `git branch -vv` | Branch with upstream |
-| `git branch --show-current` | Show current branch |
+| `git branch -d <name>` | Delete branch |
+| `git switch <branch>` | Switch branch |
 | `git checkout <branch>` | Switch branch |
-| `git checkout -b <branch>` | Create new branch |
-| `git branch -d <branch>` | Delete local branch |
-| `git branch -D <branch>` | Force delete branch |
+| `git switch -c <branch>` | Create and switch |
+| `git checkout -b <branch>` | Create and switch |
+
+> ℹ️ Always check `git status` before switching branches.
 
 ---
 
-## 🔀 Merge & Rebase
+## 🔀 Merge
 
 | Command | Description |
 |-------|-------------|
-| `git merge <branch>` | Merge branch |
-| `git rebase <branch>` | Rebase branch |
-| `git rebase -i HEAD~3` | Interactive rebase |
-| `git abort --merge` | Abort merge |
-| `git rebase --abort` | Abort rebase |
+| `git merge <branch>` | Merge branch into current branch |
 
 ---
 
-## 🌐 Remote & Sync
+## 📦 Stash (Temporary Storage)
 
 | Command | Description |
 |-------|-------------|
-| `git fetch` | Fetch remote changes |
-| `git pull` | Fetch + merge |
-| `git pull --rebase` | Fetch + rebase |
-| `git push` | Push changes |
-| `git push -u origin <branch>` | Push and set upstream |
-| `git fetch --all --prune` | Sync and clean |
+| `git stash` | Save changes temporarily |
+| `git stash save "msg"` | Save with message |
+| `git stash push -m "msg"` | Save with message |
+| `git stash list` | List stashes |
+| `git stash show stash@{n}` | Show stash summary |
+| `git stash show -p stash@{n}` | Show stash details |
+| `git stash drop stash@{n}` | Delete stash |
+| `git stash pop stash@{n}` | Apply and delete stash |
+| `git stash apply stash@{n}` | Apply and keep stash |
 
 ---
 
-## 🧹 Cleanup & Maintenance
+## ⚙️ Configuration
 
 | Command | Description |
 |-------|-------------|
-| `git branch --merged` | List merged branches |
-| `git branch --no-merged` | List unmerged branches |
-| `git clean -fd` | Remove untracked files |
-| `git gc` | Garbage collection |
-
-⚠️ **Warning:** `git clean -fd` permanently deletes files!
+| `git config --global user.name "name"` | Set global username |
+| `git config --global user.email "email"` | Set global email |
+| `touch .gitignore` | Create .gitignore file |
 
 ---
 
-## 🏷️ Tags & Releases
+## 🌍 GitHub Concepts
 
-| Command | Description |
-|-------|-------------|
-| `git tag` | List tags |
-| `git tag v1.0.0` | Create tag |
-| `git push --tags` | Push tags |
-| `git show v1.0.0` | Show tag details |
+- **Fork**: A personal copy of another user's repository
+- **Pull Request (PR)**: Request to merge changes into another branch/repository
 
 ---
 
-## 🔍 Troubleshooting
+## ✅ Best Practices
 
-| Problem | Command |
-|-------|---------|
-| Wrong branch | `git checkout <branch>` |
-| Reset to last commit | `git reset --hard HEAD` |
-| Undo last commit | `git reset --soft HEAD~1` |
-| Remove remote branch | `git push origin --delete <branch>` |
-| Fix detached HEAD | `git checkout main` |
-
----
-
-## 🧠 Best Practices
-
-- Commit often, with clear messages
+- Commit small and often
 - Use feature branches
 - Pull before push
-- Avoid force push on shared branches
-- Keep `main` always deployable
+- Never force-push to shared branches
+- Keep `main` stable
 
+---
 
+📌 **Purpose:** Learning · Daily work · Team workflows  
+📌 **Format:** GitHub / GitLab ready Markdown
