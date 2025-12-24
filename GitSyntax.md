@@ -1,81 +1,140 @@
-working directory , stage area , local directory
+# 🌿 Git Cheat Sheet
 
-git init = makes a repository
+> 💡 **Emoji input**
+>
+> - **Windows:** `Win + .`
+> - **macOS:** `Ctrl + Cmd + Space`
 
-git status = shows the situation of our file
+> 🌿 **Git quick help**
+>
+> - Show local branches: `git branch`
+> - Show remote branches: `git branch -r`
+> - Show all branches: `git branch -a`
+> - Switch branch: `git checkout <branch>`
+> - Create & switch branch: `git checkout -b <branch>`
+> - Sync remote refs: `git fetch --all --prune`
 
-git add <file> = adds our file to stage area (directory -> stage)
-we can use . for all the files
+---
 
-git commit -m "" = adds our files to local with a comment that we'll say (stage -> local)
+## 🔧 Repository Setup
 
-git commit -a -m "" = adds our files to stage area (directory -> stage) then add our files to local with a comment that we'll say (stage -> local)
-"we can not use this command before add our file , so our file must add then we can use this command ."
+| Command | Description |
+|-------|-------------|
+| `git init` | Initialize a new repository |
+| `git clone <url>` | Clone remote repository |
+| `git remote -v` | Show remotes |
+| `git remote add origin <url>` | Add remote origin |
 
-git rm --cached <file> = unsatges our files (stage -> directory)
+---
 
-git diff = shows changes in files
+## 📄 Status & Changes
 
-git diff --help = shows all commands
+| Command | Description |
+|-------|-------------|
+| `git status` | Show working tree status |
+| `git diff` | Show unstaged changes |
+| `git diff --staged` | Show staged changes |
+| `git add <file>` | Stage file |
+| `git add .` | Stage all changes |
+| `git reset <file>` | Unstage file |
+
+---
+
+## 💾 Commit
+
+| Command | Description |
+|-------|-------------|
+| `git commit -m "message"` | Create commit |
+| `git commit --amend` | Amend last commit |
+| `git log` | Commit history |
+| `git log --oneline --graph` | Compact history |
+
+---
+
+## 🌿 Branching
+
+| Command | Description |
+|-------|-------------|
+| `git branch` | List local branches |
+| `git branch -r` | List remote branches |
+| `git branch -a` | List all branches |
+| `git branch -v` | Branch with last commit |
+| `git branch -vv` | Branch with upstream |
+| `git branch --show-current` | Show current branch |
+| `git checkout <branch>` | Switch branch |
+| `git checkout -b <branch>` | Create new branch |
+| `git branch -d <branch>` | Delete local branch |
+| `git branch -D <branch>` | Force delete branch |
+
+---
+
+## 🔀 Merge & Rebase
+
+| Command | Description |
+|-------|-------------|
+| `git merge <branch>` | Merge branch |
+| `git rebase <branch>` | Rebase branch |
+| `git rebase -i HEAD~3` | Interactive rebase |
+| `git abort --merge` | Abort merge |
+| `git rebase --abort` | Abort rebase |
+
+---
+
+## 🌐 Remote & Sync
+
+| Command | Description |
+|-------|-------------|
+| `git fetch` | Fetch remote changes |
+| `git pull` | Fetch + merge |
+| `git pull --rebase` | Fetch + rebase |
+| `git push` | Push changes |
+| `git push -u origin <branch>` | Push and set upstream |
+| `git fetch --all --prune` | Sync and clean |
+
+---
+
+## 🧹 Cleanup & Maintenance
+
+| Command | Description |
+|-------|-------------|
+| `git branch --merged` | List merged branches |
+| `git branch --no-merged` | List unmerged branches |
+| `git clean -fd` | Remove untracked files |
+| `git gc` | Garbage collection |
+
+⚠️ **Warning:** `git clean -fd` permanently deletes files!
+
+---
+
+## 🏷️ Tags & Releases
+
+| Command | Description |
+|-------|-------------|
+| `git tag` | List tags |
+| `git tag v1.0.0` | Create tag |
+| `git push --tags` | Push tags |
+| `git show v1.0.0` | Show tag details |
+
+---
+
+## 🔍 Troubleshooting
+
+| Problem | Command |
+|-------|---------|
+| Wrong branch | `git checkout <branch>` |
+| Reset to last commit | `git reset --hard HEAD` |
+| Undo last commit | `git reset --soft HEAD~1` |
+| Remove remote branch | `git push origin --delete <branch>` |
+| Fix detached HEAD | `git checkout main` |
+
+---
+
+## 🧠 Best Practices
+
+- Commit often, with clear messages
+- Use feature branches
+- Pull before push
+- Avoid force push on shared branches
+- Keep `main` always deployable
 
 
-----> Commit syntax
-git log = shows commits (detail of commit like num of commit, author, date of commit)
-
-git log --help = shows some infos of commits related to log command
-
-git log --oneline = shows each commits in a line
-
-git log -2 --oneline = shows last two commits in a line
-
-git log -p = shows commits with all their changes
-
-git checkout -- <file> = unmodified file (changes modified file to last form of itself)
-
-git reset HEAD . = removes files form stage area (stage -> directory)
-
-git reset <commit> = returns our activity before that commit but keep the folder and file even empty (soft)
-
-git reset --hard <commit> = returns our activity and delete created files and folders before that commit
-
-git log --graph : list our commits like a tree and show detail of commits dedicated to branches and merges
-
-
----->Branch and Merge syntax
-git branch <branch-name> = creates a new branch
-
-git branch -a = lists our both local and remote branches
-
-git branch -r = lists our remote branches
-
-git branch -l = lists our local branches
-
-git branch -d <branch-name> = deletes a branch
-
-git switch <brance-name> = switches between branches
-git checkout <brance-name> = switches between branches
-
-git switch -c <branch-name> = creates a branch and switch to created branch
-git checkout -b <branch-name> = creates a branch and switch to created branch
-"before switch between branches we must check status and we will add and commit if needed ."
-
-git merge <branch-name> = merges(add) changes of another branch to branch we're in it
-
-
----->Stash
-git stash = adds our changes in temporary location(stash) with random id and commit
-
-git stash save "commit" = adds our changes in temporary location with our commit
-git stash push -m "commit" = adds our changes in temporary location with our commit
-
-git stash list = lists our stashes
-
-git stash drop <stash@{stash-number}> = deletes changes from the specified stash
-
-git stash show <stash@{stash-number}> = shows changes in stash in summary form
-
-git stash show -p <stash@{stash-number}> = shows changes in stash accurately
-
-git stash pop <stash@{stash-number}> = applies changes in specified branch and delete that stash
-
-git stash apply <stash@{stash-number}> = applies changes in specified branch and keep that stash
