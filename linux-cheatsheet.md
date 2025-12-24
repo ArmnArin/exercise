@@ -16,7 +16,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `pwd` | Show current working directory |
-|       |             |
+|   etc.   |      etc.    |
 
 
 ---
@@ -26,7 +26,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `cat file` | Display file content |
-|       |             |
+|   etc.   |      etc.    |
 
 
 ---
@@ -36,7 +36,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 |-------|-------------|
 | `mkdir directory` | Create directory |
 | `mkdir -p a/b/c` | Create nested directories |
-|       |             |
+|   etc.   |      etc.    |
 
 ⚠️ **Warning:** `rm -rf` is irreversible!
 
@@ -45,7 +45,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 
 | Command | Description |
 |-------|-------------|
-|       |             |
+|   etc.   |      etc.    |
 
 **Permission logic:**  
 `r = read (4)` · `w = write (2)` · `x = execute (1)`
@@ -55,7 +55,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 
 | Command | Description |
 |-------|-------------|
-|       |             |
+|   etc.   |      etc.    |
 
 ---
 
@@ -64,7 +64,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `df -h` | Disk usage |
-|       |             |
+|   etc.   |      etc.    |
 
 ---
 ## 🌐 Networking
@@ -72,7 +72,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `ip a` | Show network interfaces |
-|       |             |
+|   etc.   |      etc.    |
 
 ---
 
@@ -81,7 +81,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `apt update` | Update package list |
-|       |             |
+|   etc.   |      etc.    |
 
 ---
 
@@ -90,7 +90,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `docker ps` | List running containers |
-|       |             |
+|   etc.   |      etc.    |
 
 ---
 
@@ -98,7 +98,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 
 | Command | Description |
 |-------|-------------|
-|       |             |
+|   etc.   |      etc.    |
 
 
 ---
@@ -107,7 +107,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 
 | Command | Description |
 |-------|-------------|
-|       |             |
+|   etc.   |      etc.    |
 
 
 ## 🔑 SSH & Security
@@ -115,7 +115,7 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `ssh user@host` | SSH login |
-|       |             |
+|   etc.   |      etc.    |
 
 ---
 
