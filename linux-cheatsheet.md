@@ -16,11 +16,25 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 | Command | Description |
 |-------|-------------|
 | `pwd` | Show current working directory |
-| `ls` | List files and directories |
-| `ls -lah` | Detailed list including hidden files |
-| `cd /path` | Change directory |
-| `cd ..` | Go one level up |
-| `tree` | Display directory structure as a tree |
-| `stat file` | Show detailed file information |
+
+
+---
+
+## 📄 Files & Content
+
+| Command | Description |
+|-------|-------------|
+| `cat file` | Display file content |
+
+
+---
+## 🗂 File & Directory Management
+
+| Command | Description |
+|-------|-------------|
+| `mkdir directory` | Create directory |
+| `mkdir -p a/b/c` | Create nested directories |
+
+⚠️ **Warning:** `rm -rf` is irreversible!
 
 ---
