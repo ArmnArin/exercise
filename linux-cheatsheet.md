@@ -1,4 +1,4 @@
-> 💡 **How to insert emojis like 🐧,📁,📄, **
+> 💡 **How to insert emojis like 🐧,📁,📄,etc. **
 >
 > - **Windows:** Press `Win + .`
 > - **macOS:** Press `Ctrl + Cmd + Space`
