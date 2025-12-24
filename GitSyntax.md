@@ -25,6 +25,14 @@ git pull <repository> = updates your local branch with the latest changes from a
 git clone <HTTPS,SSH> = creates a local copy of an existing Git repository
 "after we make a remote repository in githup we must clone it ."
 
+git remote = lists our remote repository
+
+touch .gitignore = creates gitignore file
+
+git config --global user.name "your name" = save user name as global setting
+
+git config --global user.email "your email" = save user email as global setting
+
 ----> Commit syntax
 git log = shows commits (detail of commit like num of commit, author, date of commit)
 
@@ -85,3 +93,8 @@ git stash show -p <stash@{stash-number}> = shows changes in stash accurately
 git stash pop <stash@{stash-number}> = applies changes in specified branch and delete that stash
 
 git stash apply <stash@{stash-number}> = applies changes in specified branch and keep that stash
+
+
+
+'fork' is a personal copy of someone else's repository under your github account
+'pull request' is a request to merge changes from one branch/repository to another 
