@@ -1,5 +1,6 @@
-# exercise
+# Project Documentation
 
-this is all about git and linux syntaxes.
+## 📘 Documentation Index
 
-branch dev
+- [Linux commands](docs/linux-cheatsheet.md)
+- [Git commands](docs/GitSyntax.md)
