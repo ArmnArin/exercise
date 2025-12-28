@@ -2,5 +2,7 @@
 
 ## 📘 Documentation Index
 
-- [Linux commands](docs/linux-cheatsheet.md)
-- [Git commands](docs/GitSyntax.md)
+- 🐧 [Linux](docs/linux/cheatsheet.md)
+- 🌱 [Git](docs/git/cheatsheet.md)
+- 🐳 [Docker](docs/docker/basics.md)
+- 🛠️ [Troubleshooting](docs/troubleshooting.md)
