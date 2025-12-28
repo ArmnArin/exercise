@@ -3,6 +3,7 @@
 ## 📘 Documentation Index
 
 - 🐧 [Linux](docs/linux/cheatsheet.md)
+-  [Windows](docs/os/windows/cheatsheet.md)
 - 🔀 [Git](docs/git/cheatsheet.md)
 - 🐳 **Docker**
     - 📘 [Docker Basics](docs/docker/basics.md)
