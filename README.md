@@ -1,5 +1,10 @@
-# exercise
+# Project Document
 
-this is all about git and linux syntaxes.
+## Document Index
 
-branch arman
+**Operating System**
+- 🐼 [Mac](docs/mac/mac-cheatsheet.md)
+- 🐻‍❄️ [Linux](docs/linux/linux-cheatsheet.md)
+- 🐻 [Windows](docs/windows/windows-cheatsheet.md)
+
+- 💎 [Git](docs/git/git-cheatsheets.md)

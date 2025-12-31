@@ -97,4 +97,4 @@ git stash apply <stash@{stash-number}> = applies changes in specified branch and
 
 
 'fork' is a personal copy of someone else's repository under your github account
-'pull request' is a request to merge changes from one branch/repository to another 
+'pull request' is a request to merge changes from one branch/repository to another

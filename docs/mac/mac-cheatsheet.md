@@ -4,9 +4,9 @@
 > - **macOS:** Press `Ctrl + Cmd + Space`
 
 
-# 🐧 Linux Command Cheat Sheet
+# 🐧 Mac Command Cheat Sheet
 
-A compact and structured overview of the most important Linux commands
+A compact and structured overview of the most important Mac commands
 for system administration, DevOps, Docker, server operations, and troubleshooting.
 
 ---
