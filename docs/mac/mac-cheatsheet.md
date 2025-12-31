@@ -4,7 +4,7 @@
 > - **macOS:** Press `Ctrl + Cmd + Space`
 
 
-# 🐧 Mac Command Cheat Sheet
+# 🐼 Mac Command Cheat Sheet
 
 A compact and structured overview of the most important Mac commands
 for system administration, DevOps, Docker, server operations, and troubleshooting.
@@ -13,10 +13,10 @@ for system administration, DevOps, Docker, server operations, and troubleshootin
 
 # 📂 File & Folder Commands
 
-| Command | Description |
-|---------|-------------|
+| Command | Description | Example |
+|---------|-------------|---------|
 | `ls` | List files |
-| `ls -a` | List all files (nondetailed) |
+| `ls -a` | List all files (nondetailed) | .git , .gitignore , etc. |
 | `ls -la` | List all files (detailed , including hidden without inode number) |
 | `ls -lisa` | List all files (detailed , including hidden with inode number) |
 |   etc.  |     etc.    |
@@ -25,19 +25,20 @@ An inode number is a unique identifier that the Linux/Unix filesystem uses to st
 
 ---
 
-| Command | Description |
-|---------|-------------|
-| `cd directory` | Change directory (relative path) |
-| `cd directory/directory/` | Change directory (absolute path) |
-| `cd ..` | Moves the directory tree context up one directory |
-| `cd ../..` | Moves the dircetory tree context up two directory |
-| `cd ~` | Change the working directory to user's home directory |
+| Command | Description | Example |
+|---------|-------------|---------|
+| `cd directory` | Change directory (relative path) | Desktop -> Desktop/exercise |
+| `cd directory/directory/` | Change directory (absolute path) | ~  -> Desktop/exercise/docs |
+| `cd ..` | Moves the directory tree context up one directory | Desktop/exercise -> Desktop |
+| `cd ../..` | Moves the dircetory tree context up two directory | Desktop/exercise/docs -> Desktop |
+| `cd ~` | Change the working directory to user's home directory | Desktop/exercise/docs -> ~ |
+| `cd --` | Change the working directory to user's home directory | Desktop/exercise/docs -> ~ |
 |   etc.  |     etc.    |
 
 ---
 
-| Command | Description |
-|---------|-------------|
+| Command | Description | Example |
+|---------|-------------|---------|
 | `mkdir directory` | Create directory |
 | `mkdir -p a/b/c` | Create nested directories |
 | `rmdir directory` | Delete empty directory |
@@ -48,15 +49,15 @@ An inode number is a unique identifier that the Linux/Unix filesystem uses to st
 ---
 
 
-| Command | Description |
-|---------|-------------|
-| `pwd` | Show current directory |
+| Command | Description | Example |
+|---------|-------------|---------|
+| `pwd` | Show current directory | USERS/arman/Desktop/exercise |
 |   etc.   |      etc.    |
 
 ---
 
-| Command | Description |
-|---------|-------------|
+| Command | Description | Example |
+|---------|-------------|---------|
 | `cp a b` | Copy file a to b |
 | `cp -r a b` | Copy directory a to b |
 |   etc.   |      etc.    |
@@ -64,9 +65,9 @@ An inode number is a unique identifier that the Linux/Unix filesystem uses to st
 ---
 
 
-| Command | Description |
-|-------|-------------|
-| `mv a b` | Move or rename |
+| Command | Description | Example |
+|---------|-------------|---------|
+| `mv a b` | Move or rename | mv file.txt docs/txt , mv file.txt file2.md |
 |   etc.   |      etc.    |
 
 ---
@@ -74,7 +75,7 @@ An inode number is a unique identifier that the Linux/Unix filesystem uses to st
 # 📝 Viewing & Editing Files
 
 | Command | Description |
-|-------|-------------|
+|---------|-------------|
 | `cat file` | Show file contents |
 |   etc.   |      etc.    |
 
@@ -109,9 +110,9 @@ An inode number is a unique identifier that the Linux/Unix filesystem uses to st
 ---
 
 
-| Command | Description |
-|---------|-------------|
-| `date` | Show current date and time |
+| Command | Description | Example |
+|---------|-------------|---------|
+| `date` | Show current date and time | Wed Dec 31 12:52:25 |
 |   etc.  |     etc.    |
 
 ---
