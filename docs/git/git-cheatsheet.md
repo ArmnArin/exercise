@@ -1,100 +1,149 @@
-working directory , stage area , local directory
 
-git init = makes a repository
+- **Working Directory**: Your files on disk
+- **Staging Area**: Prepared files for commit
+- **Local Repository**: Commits stored locally
+- **Remote Repository**: Shared repository (GitHub, GitLab, etc.)
 
-git status = shows the situation of our file
+---
 
-git add <file> = adds our file to stage area (directory -> stage)
-we can use . for all the files
+## 🔧 Repository Setup
 
-git commit -m "" = adds our files to local with a comment that we'll say (stage -> local)
+| Command | Description |
+| ------- | ----------- |
+| `git init` | Create a new Git repository |
+| `git clone <HTTPS/SSH>` | Create a local copy of a remote repository |
+| `git remote` | List remote repositories |
+| `git remote -v` | Show remote URLs |
 
-git commit -a -m "" = adds our files to stage area (directory -> stage) then add our files to local with a comment that we'll say (stage -> local)
-"we can not use this command before add our file , so our file must add then we can use this command ."
+---
 
-git rm --cached <file> = unsatges our files (stage -> directory)
+## 📄 Status & File Tracking
 
-git diff = shows changes in files
+| Command | Description |
+| ------- | ----------- |
+| `git status` | Show current state of files |
+| `git add <file>` | Add file to staging area |
+| `git add .` | Add all files to staging area |
+| `git rm --cached <file>` | Unstage file (stage → working directory) |
+| `git rm --cached -r .` | Unstage all files (stage → working directory) |
+| `git diff` | Show file changes |
+| `git diff --help` | Show diff help |
 
-git diff --help = shows all commands
+---
 
-git push <repository> = sends (push) your local commits to a remote repository (local -> remote)
+## 💾 Commit
 
-git pull <repository> = updates your local branch with the latest changes from a remote repository (remote -> local)
+| Command | Description |
+| ------- | ----------- |
+| `git commit -m "msg"` | Commit staged files |
+| `git commit -a -m "msg"` | Stage tracked files and commit |
+| ⚠️ | New files must be added once with `git add` |
 
-git clone <HTTPS,SSH> = creates a local copy of an existing Git repository
-"after we make a remote repository in githup we must clone it ."
+---
 
-git remote = lists our remote repository
+## 📜 Commit History
 
-touch .gitignore = creates gitignore file
+| Command | Description |
+| ------- | ----------- |
+| `git log` | Show full commit history |
+| `git log --help` | Log command help |
+| `git log --oneline` | One commit per line |
+| `git log -2 --oneline` | Last two commits |
+| `git log -p` | Commits with file changes |
+| `git log --graph` | Commit tree with branches |
 
-git config --global user.name "your name" = save user name as global setting
+---
 
-git config --global user.email "your email" = save user email as global setting
+## 🔄 Undo & Reset
 
-----> Commit syntax
-git log = shows commits (detail of commit like num of commit, author, date of commit)
+| Command | Description |
+| ------- | ----------- |
+| `git checkout -- <file>` | Restore file to last commit |
+| `git reset HEAD .` | Unstage all files |
+| `git reset <commit>` | Soft reset (keep files) |
+| `git reset --hard <commit>` | Hard reset (delete changes) |
 
-git log --help = shows some infos of commits related to log command
+⚠️ **Warning:** `--hard` deletes files permanently
 
-git log --oneline = shows each commits in a line
+---
 
-git log -2 --oneline = shows last two commits in a line
+## 🌐 Remote Sync
 
-git log -p = shows commits with all their changes
+| Command | Description |
+| ------- | ----------- |
+| `git push <repository>` | Push local commits to remote |
+| `git pull <repository>` | Update local branch from remote |
 
-git checkout -- <file> = unmodified file (changes modified file to last form of itself)
+---
 
-git reset HEAD . = removes files form stage area (stage -> directory)
+## 🌿 Branching
 
-git reset <commit> = returns our activity before that commit but keep the folder and file even empty (soft)
+| Command | Description |
+| ------- | ----------- |
+| `git branch <name>` | Create branch |
+| `git branch -l` | List local branches |
+| `git branch -r` | List remote branches |
+| `git branch -a` | List all branches |
+| `git branch -d <name>` | Delete branch |
+| `git switch <branch>` | Switch branch |
+| `git checkout <branch>` | Switch branch |
+| `git switch -c <branch>` | Create and switch |
+| `git checkout -b <branch>` | Create and switch |
 
-git reset --hard <commit> = returns our activity and delete created files and folders before that commit
+> ℹ️ Always check `git status` before switching branches.
 
-git log --graph : list our commits like a tree and show detail of commits dedicated to branches and merges
+---
 
+## 🔀 Merge
 
----->Branch and Merge syntax
-git branch <branch-name> = creates a new branch
+| Command | Description |
+| ------- | ----------- |
+| `git merge <branch>` | Merge branch into current branch |
 
-git branch -a = lists our both local and remote branches
+---
 
-git branch -r = lists our remote branches
+## 📦 Stash (Temporary Storage)
 
-git branch -l = lists our local branches
+| Command | Description |
+| ------- |-------------|
+| `git stash` | Save changes temporarily |
+| `git stash save "msg"` | Save with message |
+| `git stash push -m "msg"` | Save with message |
+| `git stash list` | List stashes |
+| `git stash show stash@{n}` | Show stash summary |
+| `git stash show -p stash@{n}` | Show stash details |
+| `git stash drop stash@{n}` | Delete stash |
+| `git stash pop stash@{n}` | Apply and delete stash |
+| `git stash apply stash@{n}` | Apply and keep stash |
 
-git branch -d <branch-name> = deletes a branch
+---
 
-git switch <brance-name> = switches between branches
-git checkout <brance-name> = switches between branches
+## ⚙️ Configuration
 
-git switch -c <branch-name> = creates a branch and switch to created branch
-git checkout -b <branch-name> = creates a branch and switch to created branch
-"before switch between branches we must check status and we will add and commit if needed ."
+| Command | Description |
+| ------- | ----------- |
+| `git config --global user.name "name"` | Set global username |
+| `git config --global user.email "email"` | Set global email |
+| `touch .gitignore` | Create .gitignore file |
 
-git merge <branch-name> = merges(add) changes of another branch to branch we're in it
+---
 
+## 🌍 GitHub Concepts
 
----->Stash
-git stash = adds our changes in temporary location(stash) with random id and commit
+- **Fork**: A personal copy of another user's repository
+- **Pull Request (PR)**: Request to merge changes into another branch/repository
 
-git stash save "commit" = adds our changes in temporary location with our commit
-git stash push -m "commit" = adds our changes in temporary location with our commit
+---
 
-git stash list = lists our stashes
+## ✅ Best Practices
 
-git stash drop <stash@{stash-number}> = deletes changes from the specified stash
+- Commit small and often
+- Use feature branches
+- Pull before push
+- Never force-push to shared branches
+- Keep `main` stable
 
-git stash show <stash@{stash-number}> = shows changes in stash in summary form
+---
 
-git stash show -p <stash@{stash-number}> = shows changes in stash accurately
-
-git stash pop <stash@{stash-number}> = applies changes in specified branch and delete that stash
-
-git stash apply <stash@{stash-number}> = applies changes in specified branch and keep that stash
-
-
-
-'fork' is a personal copy of someone else's repository under your github account
-'pull request' is a request to merge changes from one branch/repository to another
+📌 **Purpose:** Learning · Daily work · Team workflows
+📌 **Format:** GitHub / GitLab ready Markdown
